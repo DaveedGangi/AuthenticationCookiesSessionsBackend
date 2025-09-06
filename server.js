@@ -18,6 +18,7 @@ app.use(cors({
 // Sessions 
 
 app.use(session({
+  name:"sid",
   store:new SQLiteStore({db:"sessions.sqlite"}),
   secret:process.env.secret_key,
   resave:false,
